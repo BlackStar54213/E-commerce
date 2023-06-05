@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="pp.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <img src="images/icon-menu.svg" alt="" id="menu" onclick="menuOpen()">
+    <div class="logo"><img src="images/logo.svg" alt="logo"></div>
+    <div class="menu" id="overlay">
+      <div class="links" id="nav">
+        <img src="images/icon-close.svg" alt="" id="menuclose" onclick="menuClose()">
+        <a href="" class="link">Collections</a>
+        <a href="" class="link">Men</a>
+        <a href="" class="link">Women</a>
+        <a href="" class="link">About</a>
+        <a href="" class="link">Contact</a>
+      </div>
+    </div>
+    <div class="icons">
+      <img src="images/icon-cart.svg" alt="cart icon" id="cart-btn" onclick="openCart()">
+      <p id="cart-amount"></p>
+      <img src="images/image-avatar.png" alt="profile pic" id="profilepic">
+    </div>
+  </nav>
+
+  <main>
+    <section class="images">
+      <div class="mainimg">
+        <img src="images/image-product-1.jpg" alt="">
+      </div>
+      <div class="thumbnails">
+        <img src="images/image-product-1-thumbnail.jpg" alt="" class="thumbimg" id="current" onclick="viewImages()">
+        <img src="images/image-product-2-thumbnail.jpg" alt="" class="thumbimg" onclick="viewImages()">
+        <img src="images/image-product-3-thumbnail.jpg" alt="" class="thumbimg" onclick="viewImages()">
+        <img src="images/image-product-4-thumbnail.jpg" alt="" class="thumbimg" onclick="viewImages()">
+      </div>
+    </section>
+    <section class="pics" id="pics">
+      <img src="images/icon-close.svg" alt="" id="close-btn" onclick="closeImages()">
+      <div class="imgs">
+        <img src="images/image-product-1.jpg" id="mainpic" alt="" class="mainpic">
+        <img src="images/image-product-2.jpg" id="mainpic" alt="" class="mainpic">
+        <img src="images/image-product-3.jpg" alt="" id="mainpic" class="mainpic">
+        <img src="images/image-product-4.jpg" alt="" id="mainpic" class="mainpic">
+      </div>
+      <img src="images/icon-previous.svg" alt="" id="prev-btn" onclick="myPrevious()">
+      <img src="images/icon-next.svg" alt="" id="next-btn" onclick="myNext()">
+
+      <div class="thumbnails">
+        <img src="images/image-product-1-thumbnail.jpg" alt="" class="thumbimg2" id="current">
+        <img src="images/image-product-2-thumbnail.jpg" alt="" class="thumbimg2">
+        <img src="images/image-product-3-thumbnail.jpg" alt="" class="thumbimg2">
+        <img src="images/image-product-4-thumbnail.jpg" alt="" class="thumbimg2">
+      </div>
+
+
+    </section>
+    <section class="text">
+      <h4>SNEAKER COMPANY</h4>
+      <h1 id="itemname">Fall Limited Edition Sneakers</h1>
+      <p>These low-profile sneakers are your perfect casual wear companion. Featuring a
+        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      <div class="prices">
+        $<input id="itemprice" value="125.00" disabled><span id="discount">50%</span>
+        <p>$250.00</p>
+      </div>
+      <div class="btns">
+        <div class="btn">
+          <button id="minus" onclick="minusOne()"><img src="images/icon-minus.svg" alt=""></button>
+          <input id="quantity" value="0" disabled><button id="plus" onclick="plusOne()"><img src="images/icon-plus.svg"
+              alt=""></button>
+        </div>
+        <button id="addcart" onclick="addToCart()"><img src="images/icon-cart.svg" alt=""> Add to cart</button>
+      </div>
+    </section>
+    <!--this is th code for the cart display-->
+    <div class="cart" id="cart">
+      <h4>Cart</h4>
+      <div class="items" id="item-display">
+        <p id="empty">Your cart is empty</p>
+      </div>
+    </div>
+
+
+
+
+  </main>
+
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">DESMOND IZU</a>.
+  </div>
+</body>
+<script src="pp.js"></script>
+
+</html>
